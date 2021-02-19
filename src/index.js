@@ -5,10 +5,8 @@ import reportWebVitals from './reportWebVitals';
 import Home from './screens/home/Home'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Home />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <Home />,
+   document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
