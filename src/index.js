@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Home from './screens/home/Home'
+import modal from 'react-modal'
+
+require('react-dom');
+window.React2 = require('react');
+console.log(window.React1 === window.React2);
+
 
 ReactDOM.render(
     <Home />,
