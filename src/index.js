@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import 'typeface-roboto';
 import reportWebVitals from './reportWebVitals';
 import Home from './screens/home/Home'
-import modal from 'react-modal'
+
 
 require('react-dom');
 window.React2 = require('react');

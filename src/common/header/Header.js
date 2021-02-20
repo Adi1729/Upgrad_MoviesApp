@@ -5,6 +5,10 @@ import logo from '../../assets/logo.svg';
 import Modal from 'react-modal';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import Typography from '@material-ui/core/Typography';
+import FormControl from '@material-ui/core/FormControl';
+import InputLabel from '@material-ui/core/InputLabel';
+import Input from '@material-ui/core/Input';
 
 const customStyles ={
     content :{
@@ -17,6 +21,14 @@ const customStyles ={
 
     }
 }
+
+const TabContainer = function(props){
+    return(
+        <Typography component = "div" style = {{padding :0 }}>
+            {props.children}
+        </Typography>
+    ); 
+}   
 class Header extends Component {
     constructor(){
         super();
@@ -63,7 +75,15 @@ class Header extends Component {
                     <Tabs value ={this.state.value} onChange = {this.tabChangeHandler}>
                     <Tab label ="Login" />
                     <Tab label ="Register" />
-                    </Tabs> 
+                    </Tabs>
+                    <TabContainer>
+                        <FormControl required >
+                            <InputLabel htmlFor ="username">Username</InputLabel>
+                            <Input id = "username" type ="text" />
+                            <InputLabel htmlFor ="password">Password</InputLabel>
+                            <Input id = "password" type ="password" />
+                        </FormControl>
+                    </TabContainer> 
                 </Modal>
                 
             </div>
