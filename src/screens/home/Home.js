@@ -18,7 +18,9 @@ import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem'
 import Checkbox from '@material-ui/core/Checkbox';
 import ListItemText from '@material-ui/core/ListItemText';
-import TextField from '@material-ui/core/TextField'
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+
 
 const styles = theme => ({
     root: {
@@ -71,9 +73,9 @@ class Home extends Component {
         this.setState({ artists: event.target.value });
 
     }
-    
-    genreSelectHandler = event =>{
-        this.setState({genres : event.target.value})
+
+    genreSelectHandler = event => {
+        this.setState({ genres: event.target.value })
     }
 
     render() {
@@ -138,8 +140,8 @@ class Home extends Component {
                                                 <ListItemText primary={genre.name} />
                                             </ MenuItem>
                                         ))}
-                                        </Select>
-                                        
+                                    </Select>
+
                                 </FormControl>
 
                                 <FormControl className={classes.formControl} >
@@ -154,34 +156,48 @@ class Home extends Component {
                                     </MenuItem>
 
                                         {artists.map(artist => (
-                                            <MenuItem key={artist.id} value={artist.first_name +" "+artist.last_name} >
-                                                <Checkbox checked={this.state.artists.indexOf(artist.first_name +" "+ artist.last_name) > -1} />
-                                                <ListItemText primary={artist.first_name+ " "+artist.last_name} />
+                                            <MenuItem key={artist.id} value={artist.first_name + " " + artist.last_name} >
+                                                <Checkbox checked={this.state.artists.indexOf(artist.first_name + " " + artist.last_name) > -1} />
+                                                <ListItemText primary={artist.first_name + " " + artist.last_name} />
                                             </ MenuItem>
                                         ))}
-                                        </Select>
-                                        
+                                    </Select>
+
                                 </FormControl>
 
                                 <FormControl className={classes.formControl} >
-                                    <TextField 
-                                    id ="releaseStartDate"
-                                    label ="Release Start Date"
-                                    type ="date"
-                                    defaultValue =""
-                                    InputLabelProps = {{shrink : true}}/>
-                                    </FormControl>
-                                
+                                    <TextField
+                                        id="releaseStartDate"
+                                        label="Release Start Date"
+                                        type="date"
+                                        defaultValue=""
+                                        InputLabelProps={{ shrink: true }} />
+                                </FormControl>
+
+                                <FormControl className={classes.formControl} >
+                                    <TextField
+                                        id="releaseEndDate"
+                                        label="Release End Date"
+                                        type="date"
+                                        defaultValue=""
+                                        InputLabelProps={{ shrink: true }} />
+                                </FormControl> < br />
+
+                                <FormControl className={classes.formControl} >
+                                    <Button variant="contained" color="primary" > APPLY
+                                </Button>
+                                </FormControl>
+
 
                             </CardContent>
                         </Card>
 
                     </div>
-                    </div>
                 </div>
+            </div>
         )
     }
 }
 
-export default withStyles(styles)(Home) ;
+export default withStyles(styles)(Home);
 
