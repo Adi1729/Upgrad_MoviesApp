@@ -22,3 +22,15 @@
      margin-bottom: 20px;
 
  }
+
+ .dispNone{
+     display : none; 
+ }
+
+ .red{
+     color: red;
+ }
+
+ .dispBlock{
+     display: block;
+ }
