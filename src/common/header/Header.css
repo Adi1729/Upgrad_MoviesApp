@@ -4,6 +4,11 @@
     padding: 8px 32px 8px 16px;
 }
 
+.bookshow-button {
+    float: right;
+    padding-right: 0.5%;
+} 
+
 .login-button {
     float: right;
 } 
